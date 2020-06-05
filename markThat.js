@@ -32,7 +32,7 @@
       return text.innerHTML = markThat(text.innerHTML);
     } else if (typeof text === 'string') {
       // String
-      return text.replace(/==(.+)==/g, '<mark>$1</mark>');
+      return text.replace(/==([^=]+)==/g, '<mark>$1</mark>');
     } else {
       // ??? Unknown, throw an error
       throw new Error('You passed an argument that mark.js does not recognize. Please consider providing a string or an HTML element.');

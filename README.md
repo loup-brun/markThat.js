@@ -18,10 +18,10 @@ Supports AMD and the browser.
 ```js
 var text = 'Some HTML text that I want to ==mark==.';
 var article = document.querySelector('article');
-markThat(text); // returns 'Some HTML text that I want to <mark>mark</mark>.'
+var markedText = markThat(text); // returns 'Some HTML text that I want to <mark>mark</mark>.'
 
 // Modify the DOM yourself
-article.innerHTML = text;
+article.innerHTML = markedText;
 ```
 
 ### Method 2: DOM element

@@ -2,10 +2,15 @@
 
 A mini script to `markThat(text)`.
 
+## WTF
+
+Every dreamt of using the `==` fences to `<mark` your text in markdown, but your rendering engine wouldn’t support it?
+This little guy’s got you covered.
+
 ## Install
 
 Load the script on the page.
-Supports AMD and the browser.
+Supports both AMD and the browser.
 
 ```html
 <script src="/path/to/markThat.js"></script>

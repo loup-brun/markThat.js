@@ -4,7 +4,7 @@ A mini script to `markThat(text)`.
 
 ## WTF
 
-Every dreamt of using the `==` fences to `<mark` your text in markdown, but your rendering engine wouldn’t support it?
+So you want to use the `==` fences for using the [HTML `<mark>` element](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element) in Markdown, but your rendering engine wouldn’t support it?
 This little guy’s got you covered.
 
 ## Install
@@ -18,20 +18,19 @@ Supports both AMD and the browser.
 
 ## Usage
 
-### Method 1: Play with strings
+### Method 1: String
 
 ```js
 var text = 'Some HTML text that I want to ==mark==.';
 var article = document.querySelector('article');
-var markedText = markThat(text); // returns 'Some HTML text that I want to <mark>mark</mark>.'
 
-// Modify the DOM yourself
-article.innerHTML = markedText;
+// Update the DOM yourself
+article.innerHTML = markThat(text); // 'Some HTML text that I want to <mark>mark</mark>.'
 ```
 
 ### Method 2: DOM element
 
-Alternatively, just specify an HTML node  and let `markThat` do its work:
+Alternatively, just specify a DOM element and let `markThat` do the trick:
 
 ```js
 var article = document.querySelector('article');

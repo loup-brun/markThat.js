@@ -1,8 +1,8 @@
 # markThat.js
 
-A mini script to `markThat(text)`.
+A mini script to `markThat(==text==)`.
 
-## WTF
+## What’s this?
 
 So you want to use the `==` fences for using the [HTML `<mark>` element](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element) in Markdown, but your rendering engine wouldn’t support it?
 This little guy’s got you covered.

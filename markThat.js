@@ -20,7 +20,8 @@
 }(typeof self !== 'undefined' ? self : this, function (markThat) {
   // Use markThat() in some fashion.
   /**
-   * @return {String} Text with == transformed to <mark>.
+   * @param  {String|Object} text Text to render or DOM node to update
+   * @return {String}             Text with == transformed to <mark>.
    */
   return function markThat(text) {
     // Check whether the user passed a node or a string
@@ -29,13 +30,14 @@
         (typeof text.style === 'object') &&
         (typeof text.ownerDocument ==='object')) {
       // HTML node
+      // Re-run the function, passing the element’s innerHTML as argument
       return text.innerHTML = markThat(text.innerHTML);
     } else if (typeof text === 'string') {
       // String
       return text.replace(/==([^=]+)==/g, '<mark>$1</mark>');
     } else {
       // ??? Unknown, throw an error
-      throw new Error('You passed an argument that mark.js does not recognize. Please consider providing a string or an HTML element.');
+      throw new Error('You passed an argument that markThat.js does not recognize. Please consider providing a string or an HTML element.');
     }
   };
 }));

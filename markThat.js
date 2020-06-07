@@ -20,8 +20,10 @@
 }(typeof self !== 'undefined' ? self : this, function (markThat) {
   // Use markThat() in some fashion.
   /**
-   * @param  {String|Object} text Text to render or DOM node to update
-   * @return {String}             Text with == transformed to <mark>.
+   * 
+   * @throws  {Error}  Throws an error if the argument was neither a DOM element nor a string.
+   * @param   {string} text Text to render or DOM node to update
+   * @returns {string} Text with == transformed to <mark>.
    */
   return function markThat(text) {
     // Check whether the user passed a node or a string
